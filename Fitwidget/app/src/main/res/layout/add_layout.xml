@@ -3,20 +3,22 @@
     android:id="@+id/add_layout1"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
+
     <FrameLayout
-        android:layout_width="235dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:id="@+id/frameLayout"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/frameLayout"></FrameLayout>
+        android:layout_centerHorizontal="true"></FrameLayout>
 
     <FrameLayout
         android:id="@+id/frameLayout_two"
-        android:layout_width="235dp"
+        android:background ="#ffffff"
+        android:layout_width="255dp"
         android:layout_height="230dp"
+        android:layout_marginBottom="38dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="35dp"
-        android:layout_alignStart="@+id/frameLayout">
+        android:layout_centerHorizontal="true">
         </FrameLayout>
+
 </RelativeLayout>

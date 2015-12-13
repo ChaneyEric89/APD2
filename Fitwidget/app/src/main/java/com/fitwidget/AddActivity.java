@@ -26,14 +26,14 @@ public class AddActivity extends Activity {
 
 
         //Add Exercise fragment
-        //ButtonFrag fragment = new ButtonFrag();
+        AddFrag fragment = new AddFrag();
 
         //Add List fragment
-        //ListFrag listFrag = new ListFrag();
+        ListFrag listFrag = new ListFrag();
 
-//        fragmentTransaction.add(R.id.frameLayout, fragment);
-//        fragmentTransaction.add(R.id.frameLayout_two, fragment);
-//        fragmentTransaction.commit();
+        fragmentTransaction.add(R.id.frameLayout, fragment);
+        fragmentTransaction.add(R.id.frameLayout_two, listFrag);
+        fragmentTransaction.commit();
 
 
 

@@ -52,7 +52,9 @@ public class ButtonFrag extends Fragment {
             @Override
             public void onClick(View v) {
 
-                //Add code for Build Alert here....
+                Intent intent = new Intent(getActivity(), BuildActivity.class);
+
+                getActivity().startActivity(intent);
 
 
             }

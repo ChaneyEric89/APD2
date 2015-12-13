@@ -20,6 +20,14 @@
 
         <activity
             android:name=".AddActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:label="Add Exercises" >
+
+        </activity>
+
+        <activity
+            android:name=".BuildActivity"
+            android:windowSoftInputMode="adjustPan"
             android:label="Add Exercises" >
 
         </activity>
