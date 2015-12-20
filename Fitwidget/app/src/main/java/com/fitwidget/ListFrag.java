@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class ListFrag extends ListFragment implements AdapterView.OnItemLongClickListener{
 
     ListView lv;
-   // String[] entryList;
+
     public ArrayList<Saved> entriesList;
     public ArrayList<String> entriesForAdapter;
     public ArrayAdapter<String> adapter;
@@ -78,25 +78,6 @@ public class ListFrag extends ListFragment implements AdapterView.OnItemLongClic
 
 
 
-//    @Override
-//    public void onListItemClick(ListView l, View v, int position, long id) {
-//        Log.i("FragmentList", "Item clicked: " + id);
-//
-//        entriesForAdapter.remove(entriesForAdapter.get(position));
-//        //( getListAdapter(new ArrayAdapter<String>));
-//       adapter.notifyDataSetChanged();
-//
-//
-//
-//    }
-
-//    @Override
-//    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//        Log.i("FragmentList", "Item clicked: " + id);
-//        entriesForAdapter.remove(entriesForAdapter.get(position));
-//        //entriesForAdapter.notifyDataSetChanged();
-//        adapter.notifyDataSetChanged();
-//    }
 
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {

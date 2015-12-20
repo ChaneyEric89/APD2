@@ -24,8 +24,6 @@ public class BuildActivity extends Activity {
 
         bodyPart = new BodyPart();
 
-//        application = (Application)BodyPart.getContext();
-//        bodyPart = (BodyPart)application;
 
         setContentView(R.layout.build_layout);
 
@@ -53,7 +51,6 @@ public class BuildActivity extends Activity {
 
         bodyPart.getInstance().bPart = x;
 
-        //bodyPart.setState(x);
 
     }
 

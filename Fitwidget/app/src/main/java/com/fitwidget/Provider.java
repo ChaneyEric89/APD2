@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.widget.RemoteViews;
 
 /**
- * Created by ericchaney on 12/16/15.
+ * Created by eric chaney on 12/16/15.
  */
 public class Provider extends AppWidgetProvider {
 
@@ -25,17 +25,6 @@ public class Provider extends AppWidgetProvider {
         super.onReceive(context, intent);
 
 
-
-//        if(intent.getAction().equals(ACTION_VIEW_DETAILS)) {
-//            Saved items = (Saved)intent.getSerializableExtra(EXTRA_ITEM);
-//            if(items !=null) {
-//                Intent detailIntent = new Intent(context, DetailActivity.class);
-//                detailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                detailIntent.putExtra(DetailActivity.EXTRA_ITEM, items);
-//                context.startActivity(detailIntent);
-//            }
-//        }   else
-//
         if(intent.getAction().equals(ACTION_VIEW_ADD)) {
             Intent formIntent = new Intent(context, MainActivity.class);
             formIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -65,9 +54,6 @@ public class Provider extends AppWidgetProvider {
             PendingIntent aIntent = PendingIntent.getBroadcast(context, 0, addIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             widgetView.setOnClickPendingIntent(R.id.widget_button, aIntent);
 
-//            Intent detailIntent = new Intent(ACTION_VIEW_DETAILS);
-//            PendingIntent pIntent = PendingIntent.getBroadcast(context, 0, detailIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-//            widgetView.setPendingIntentTemplate(R.id.entries_list, pIntent);
 
             appWidgetManager.updateAppWidget(widgetId, widgetView);
         }

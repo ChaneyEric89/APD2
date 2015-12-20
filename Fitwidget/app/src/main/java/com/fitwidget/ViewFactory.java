@@ -18,7 +18,6 @@ public class ViewFactory implements RemoteViewsService.RemoteViewsFactory {
     private static final int ID_CONSTANT = 0x0101010;
     private Context mContext;
 
-    private Context context;
     BodyPart bodyPart;
     String findBodyPart;
 
@@ -45,9 +44,6 @@ public class ViewFactory implements RemoteViewsService.RemoteViewsFactory {
             bodyPart = new BodyPart();
         }
 
-         //application = (Application)BodyPart.getContext();
-         //bodyPart = (BodyPart)application;
-
         if(entriesList == null){
             entriesList = new ArrayList<Saved>();
         }
@@ -56,24 +52,7 @@ public class ViewFactory implements RemoteViewsService.RemoteViewsFactory {
             workoutList = new ArrayList<String>();
         }
 
-//        try {
-//
-//
-//            FileInputStream fin = mContext.openFileInput("entries.dat");
-//
-//
-//            ObjectInputStream oin = new ObjectInputStream(fin);
-//            entriesList = (ArrayList<Saved>) oin.readObject();
-//
-//            oin.close();
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//
-//        createWorkout(setBodyPart());
+
 
     }
 
@@ -82,7 +61,7 @@ public class ViewFactory implements RemoteViewsService.RemoteViewsFactory {
     public void onDataSetChanged() {
 
         findBodyPart = setBodyPart();
-       // itemRemoteV = null;
+
         workoutList = null;
 
         try {
@@ -175,13 +154,7 @@ public class ViewFactory implements RemoteViewsService.RemoteViewsFactory {
 
 
 
-//        if(bodyPart.getState() == null){
-//            String x = "Chest";
-//            return x;
-//        }else {
-//            String x = bodyPart.getState();
-//            return x;
-//        }
+
 
     }
 
