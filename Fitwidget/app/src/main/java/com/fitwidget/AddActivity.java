@@ -10,6 +10,10 @@ import android.widget.RelativeLayout;
  * Created by eric chaney on 12/3/15.
  */
 public class AddActivity extends Activity {
+    FragmentTransaction fragmentTransaction;
+    FragmentManager fragmentManager;
+
+    BodyPart bodyPart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,25 +25,34 @@ public class AddActivity extends Activity {
         add.setBackgroundResource(R.drawable.dumbellstwo);
 
 
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+         fragmentManager = getFragmentManager();
+         fragmentTransaction = fragmentManager.beginTransaction();
 
 
         //Add Exercise fragment
         AddFrag fragment = new AddFrag();
 
-        //Add List fragment
-        ListFrag listFrag = new ListFrag();
+
+        //ListFrag listFrag = new ListFrag();
 
         fragmentTransaction.add(R.id.frameLayout, fragment);
-        fragmentTransaction.add(R.id.frameLayout_two, listFrag);
+       // fragmentTransaction.add(R.id.frameLayout_two, listFrag);
+
+
         fragmentTransaction.commit();
 
-
+        refreshListFrag();
 
 
     }
 
+    //Add List fragment
+    public void refreshListFrag(){
+        fragmentTransaction = fragmentManager.beginTransaction();
+        ListFrag listFrag = new ListFrag();
+        fragmentTransaction.replace(R.id.frameLayout_two, listFrag);
+        fragmentTransaction.commit();
+    }
 
 
 

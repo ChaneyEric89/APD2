@@ -23,7 +23,7 @@ public class Saved implements Serializable {
 
         public Saved(String bodyPart, String exercise){
             sBodyPart = bodyPart;
-            sBodyPart = exercise;
+            sExercise = exercise;
 
         }
 

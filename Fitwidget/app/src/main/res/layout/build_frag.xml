@@ -17,7 +17,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="Build"
-        android:id="@+id/button"
+        android:id="@+id/final_button"
         android:layout_below="@+id/select_build"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="66dp" />
